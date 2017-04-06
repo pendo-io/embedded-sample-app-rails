@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+[role="main"] {
+  padding-top: 50px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FFFFFF;
+  font-weight: bold;
+}

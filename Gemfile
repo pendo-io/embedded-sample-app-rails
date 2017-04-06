@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platform: :mri
