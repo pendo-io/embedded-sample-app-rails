@@ -7,6 +7,29 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
+
+    <script>
+      <% if current_user %>
+        var receptiveAppSettings = {
+          "jwt": "<%= raw(@snippet) %>"
+        };
+        (function() {
+          function async_load() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript'; s.async = true;
+            s.src = 'https://receptive.io/js/widget/widget.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+          if (window.attachEvent) {
+            window.attachEvent('onload', async_load);
+          } else {
+            window.addEventListener('load', async_load, false);
+          }})();
+      <% end %>
+    </script>
+
+
   </head>
   <body>
     <header>
