@@ -3,8 +3,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <title><%= content_for?(:title) ? yield(:title) : "Embedded Sample App Rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Example website for widget" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Embedded Sample App Rails" %>">
+    <link rel="stylesheet" type="text/css" href="../assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/slick/slick-theme.css"/>
+
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -37,8 +40,20 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
+      <div class="body-image">
+        <img class="body-image__image" src="../assets/background-tree.jpg" alt="">
+        <img class="body-image__image" src="../assets/fall.jpeg" alt="">
+        <img class="body-image__image" src="../assets/pines.jpeg" alt="">
+        <img class="body-image__image" src="../assets/smashed-avo.jpeg" alt="">
+        <img class="body-image__image" src="../assets/cafe.jpeg" alt="">
+      </div>
+
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../assets/slick/slick.min.js"></script>
+
   </body>
 </html>

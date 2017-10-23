@@ -14,11 +14,63 @@
  *= require_self
  */
 
+ html, body{
+   height: 100%;
+   height: 100%;
+ }
+
 [role="main"] {
-  padding-top: 50px;
+  padding-top: 0;
+  margin: 0;
+  height: 100%;
+}
+
+main{
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-inverse {
+  background-color: #FFF9F6;
+  box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.2);
+  border: 0;
+
+  .navbar-nav > li > a{
+    color: #333;
+
+    &:hover{
+      color: #999;
+    }
+  }
 }
 
 .navbar-inverse .navbar-brand {
-  color: #FFFFFF;
+  color: #333;
   font-weight: bold;
+  &:hover{
+    color: #999;
+  }
+}
+
+.body-image{
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0
+}
+
+.authform{
+  z-index: 10;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.authform form{
+  min-width: 340px;
+  background: #fff;
+  border: 0;
+  box-shadow: 0 0 53px rgba(0,0,0,0.2);
 }

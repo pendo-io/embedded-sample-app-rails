@@ -26,7 +26,7 @@ class HomeController < ApplicationController
       },
       return_url: "http://example.com"
     }
-    JWT.encode(snippet, ENV["RECEPTIVE_TOKEN"], "HS256")
+    
   end
 
 end
