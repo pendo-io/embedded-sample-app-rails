@@ -20,7 +20,6 @@ $(document).ready(function(){
   $('.body-image').randomize('.body-image__image');
 
 
-
   $('.body-image').slick({
     dots: false,
     infinite: true,
