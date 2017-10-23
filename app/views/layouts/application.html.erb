@@ -13,7 +13,7 @@
     <script>
       <% if current_user %>
         var receptiveAppSettings = {
-          "jwt": "<%= raw(@snippet) %>"
+          "jwt": <%= raw(@snippet.to_json) %>
         };
         (function() {
           function async_load() {
@@ -38,6 +38,7 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
+
       <div class="body-image">
         <%= image_tag "background-tree.jpg" %>
         <%= image_tag "fall.jpg" %>
@@ -46,7 +47,8 @@
         <%= image_tag "cafe.jpg" %>
       </div>
 
-       <%= render 'layouts/messages' %>
+      <%= render 'layouts/messages' %>
+
        <%= yield %>
     </main>
   </body>
