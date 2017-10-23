@@ -28,6 +28,7 @@ $(document).ready(function(){
     fade: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    arrows: false
   });
 });
