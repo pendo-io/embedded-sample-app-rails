@@ -13,7 +13,7 @@
     <script>
       <% if current_user %>
         var receptiveAppSettings = {
-          "jwt": <%= raw(@snippet.to_json) %>
+          "jwt": "<%= @jwt_token %>"
         };
         (function() {
           function async_load() {

@@ -4,10 +4,10 @@ class HomeController < ApplicationController
   def index
     @ingredients = []
     10.times { @ingredients << "#{Faker::Food.measurement} of <strong>#{Faker::Food.ingredient}</strong>" }
-    @snippet = user_snippet
+    @jwt_token = make_jwt_token
   end
 
-  def user_snippet
+  def make_jwt_token
     return nil unless current_user
     snippet = {
       account: {
@@ -26,7 +26,7 @@ class HomeController < ApplicationController
       },
       return_url: "http://example.com"
     }
-    
+    JWT.encode(snippet, ENV["RECEPTIVE_TOKEN"], "HS256")
   end
 
 end
