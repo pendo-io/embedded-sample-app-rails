@@ -19,7 +19,7 @@
           function async_load() {
             var s = document.createElement('script');
             s.type = 'text/javascript'; s.async = true;
-            s.src = 'https://receptive.io/js/widget/widget.js';
+            s.src = "<%= @receptive_frontend_url %>" + '/js/widget/widget.js';
             var x = document.getElementsByTagName('script')[0];
             x.parentNode.insertBefore(s, x);
           }
