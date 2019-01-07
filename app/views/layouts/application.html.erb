@@ -39,17 +39,34 @@
     </header>
     <main role="main">
 
-      <div class="body-image">
-        <%= image_tag "background-tree.jpg" %>
-        <%= image_tag "fall.jpg" %>
-        <%= image_tag "pines.jpg" %>
-        <%= image_tag "smashed-avo.jpg" %>
-        <%= image_tag "cafe.jpg" %>
+      <div class="your-app">
+        <div class="div-long">
+          <h1>Example App</h1>
+        </div>
+        <div class="div-hero">
+
+        </div>
+        <div class="div-content-container">
+          <div class="div-content__item">
+            <ul class="link-list">
+              <li><a href="">Link 1</a></li>
+              <li><a href="">Link 2</a></li>
+              <li><a class="receptive-link" href="#" onclick="receptivePublicLib.openReceptive(e)">Submit a request</a></li>
+            </ul>
+          </div>
+          <div class="div-content__item"></div>
+          <div class="div-content__item"></div>
+        </div>
       </div>
+
+      <div class="receptive-logo">
+        <%= image_tag "receptive-logo.png" %>
+      </div>
+
 
       <%= render 'layouts/messages' %>
 
-       <%= yield %>
+      <%= yield %>
     </main>
   </body>
 </html>

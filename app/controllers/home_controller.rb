@@ -18,7 +18,7 @@ class HomeController < ApplicationController
         monthly_value: "99.99"
       },
       vendor: {
-        id: "bfe23637-04b7-4c1a-972e-232520931520"
+        id: "jt0qe9rjg0we9rjsdifj"
       },
       user: {
         full_name: current_user.full_name,
