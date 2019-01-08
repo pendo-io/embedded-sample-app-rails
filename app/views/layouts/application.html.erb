@@ -37,34 +37,12 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+
     <main role="main">
-
-      <div class="your-app">
-        <div class="div-long">
-          <h1>Example App</h1>
-        </div>
-        <div class="div-hero">
-          <div class="div-hero__bar-chart"><%= image_tag "graph-1.png" %></div>
-          <div class="div-hero__pie-chart"><%= image_tag "graph-2.png" %></div>
-          <div class="div-hero__pie-chart"><%= image_tag "graph-3.png" %></div>
-          <div class="div-hero__pie-chart"><%= image_tag "graph-4.png" %></div>
-        </div>
-        <div class="div-content-container">
-          <div class="div-content__item">
-            <%= image_tag "roi-image.png" %>
-          </div>
-          <div class="div-content__item">
-            <%= image_tag "improvements-image.png" %>
-          </div>
-          <div class="div-content__item">
-            <%= image_tag "graph-5.png" %>
-          </div>
-        </div>
-      </div>
-
-
+      <% if user_signed_in? %>
+        <%= render 'layouts/app_layout' %>
+      <% end %>
       <%= render 'layouts/messages' %>
-
       <%= yield %>
     </main>
   </body>
