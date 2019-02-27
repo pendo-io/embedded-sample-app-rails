@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     10.times { @ingredients << "#{Faker::Food.measurement} of <strong>#{Faker::Food.ingredient}</strong>" }
     @jwt_token = make_jwt_token
     @receptive_frontend_url = ENV["RECEPTIVE_FRONTEND_URL"]
+    @user = current_user
   end
 
   def make_jwt_token
