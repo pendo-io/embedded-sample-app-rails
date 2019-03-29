@@ -17,4 +17,5 @@ WORKDIR /var/app/current
 
 EXPOSE 3000
 
-CMD bundle install && bundle exec rails s -p 3000 -b 0.0.0.0
+ENTRYPOINT ["/var/app/current/script/test-server-entrypoint"]
+CMD ["bundle", "exec", "rails", "s", "-p", "3000", "-b", "0.0.0.0"]
