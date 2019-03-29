@@ -10,9 +10,10 @@ global:
   default_ec2_keyname: ec2
   default_platform: 64bit Amazon Linux 2016.09 v2.3.3 running Ruby 2.3 (Puma)
   default_region: eu-west-1
+  include_git_submodules: true
   instance_profile: null
   platform_name: null
   platform_version: null
-  profile: null
+  profile: eb-cli
   sc: git
   workspace_type: Application
