@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo docker build -t docker.io/receptive/test-widget .
+sudo docker push receptive/test-widget
