@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+
+publicHostname=$(cat /tmp/domain.txt | tr -d '[:space:]')
+
+export RECEPTIVE_FRONTEND_URL=$publicHostname
+export RECEPTIVE_TOKEN=blah # default fixtures secret
+export VENDOR_PUBLIC_ID=jt0qe9rjg0we9rjsdifj # foobar vendor public id
+
+cd /var/app/current/apps/api2/src && bundle install && exec "$@"

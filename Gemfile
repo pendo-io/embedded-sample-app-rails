@@ -17,6 +17,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'faker'
 gem 'jwt'
+gem 'json'
 
 group :development, :test do
   gem 'byebug', platform: :mri
