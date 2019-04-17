@@ -14,7 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
-gem 'bootstrap-sass'
+gem "bootstrap-sass", ">= 3.4.1"
 gem 'faker'
 gem 'jwt'
 gem 'json'
